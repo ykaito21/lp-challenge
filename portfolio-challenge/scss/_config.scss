@@ -1,8 +1,8 @@
 $primary: #444;
 $secondary: rgb(31, 82, 192);
 $show-home-image: true;
-$home-image: url(../img/background.jpg);
-$home-image-randam: url(https://source.unsplash.com/random);
+$home-image: url("../img/background.jpg");
+$home-image-randam: url("https://source.unsplash.com/random");
 $background-opacity: 0.9;
 
 @mixin easeOut {
@@ -26,5 +26,30 @@ $background-opacity: 0.9;
       z-index: -1;
       background: rgba($primary, $background-opacity);
     }
+  }
+}
+
+// media query mixins
+@mixin mediaSm {
+  @media only screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media only screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media only screen and (min-width: 1171px) {
+    @content;
   }
 }

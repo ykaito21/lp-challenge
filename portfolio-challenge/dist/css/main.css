@@ -80,6 +80,37 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
+@media only screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  .menu-nav,
+  .menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    .menu-nav.show,
+    .menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-branding .portrait {
+      background: url("../img/portrait_small.jpg");
+      width: 150px;
+      height: 150px; } }
+
+@media only screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; } }
+
 * {
   box-sizing: border-box; }
 
@@ -91,7 +122,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
-    background: url(https://source.unsplash.com/random);
+    background: url("https://source.unsplash.com/random");
     background-attachment: fixed;
     background-size: cover; }
   body:after {
@@ -110,7 +141,8 @@ main {
   main .icons {
     margin-top: 1rem; }
     main .icons a {
-      padding: 0.4rem; }
+      padding: 0.4rem;
+      transition: all 0.5s ease-out; }
       main .icons a:hover {
         color: #1f52c0; }
   main#home {
