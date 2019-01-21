@@ -1,6 +1,7 @@
 @import "config";
 @import "menu";
 @import "about";
+@import "work";
 
 * {
   box-sizing: border-box;
@@ -49,6 +50,29 @@ a {
 
 li {
   list-style: none;
+}
+
+// button
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.3rem;
+  &:hover {
+    background: $secondary;
+    color: set-text-color($secondary);
+  }
+}
+
+.btn-dark {
+  @extend .btn;
+  background: darken($primary, 50);
+  color: white;
+}
+
+.btn-light {
+  @extend .btn;
+  background: lighten($primary, 50);
+  color: #333;
 }
 
 // header
